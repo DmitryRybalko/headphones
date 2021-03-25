@@ -12141,7 +12141,8 @@ var _swiper = require("swiper");
 require("swiper/swiper-bundle.css");
 
 // import Swiper styles
-_swiper.Swiper.use([_swiper.Navigation, _swiper.Pagination, _swiper.EffectFade, _swiper.Controller]);
+_swiper.Swiper.use([_swiper.Navigation, _swiper.Pagination, _swiper.EffectFade, _swiper.Controller]); // 1st swiper for images
+
 
 var swiperImg = new _swiper.Swiper(".swiper-container", {
   loop: true,
@@ -12162,7 +12163,7 @@ var swiperImg = new _swiper.Swiper(".swiper-container", {
   controller: {
     control: swiperText
   }
-}); // 2nd swiper  for text
+}); // 2nd swiper for text
 
 var swiperText = new _swiper.Swiper(".ls-panel__slider-container", {
   loop: true,
@@ -12213,7 +12214,7 @@ swiperText.on("transitionStart", function () {
   var styledPlusIcon = document.querySelector(".plus-icon".concat(swiperImg.realIndex + 1)).classList.add("active-panel-plus-icon");
   var styledLineH = document.querySelector(".lineH".concat(swiperImg.realIndex + 1)).classList.add("active-panel-line");
   var styledLineV = document.querySelector(".lineV".concat(swiperImg.realIndex + 1)).classList.add("active-panel-line");
-}); //toggle menu
+});
 
 var toggleMenu = function toggleMenu() {
   var hamburgerMenu = document.querySelector(".menu-btn-wrapper");
@@ -12223,6 +12224,23 @@ var toggleMenu = function toggleMenu() {
   });
 };
 
+var toggleCart = function toggleCart() {
+  var cart = document.querySelector(".cart-icon");
+  var cartMenu = document.querySelector(".cart-toggle-wrapper");
+  var closeCartIcon = document.querySelector(".close-icon");
+  var closeCart = document.querySelector(".cart-toggle-wrapper");
+  cart.addEventListener("click", function () {
+    return cartMenu.classList.toggle("cart-toggle-wrapper-active");
+  });
+  closeCartIcon.addEventListener("click", function () {
+    return cartMenu.classList.remove("cart-toggle-wrapper-active");
+  });
+  closeCart.addEventListener("click", function () {
+    return cartMenu.classList.remove("cart-toggle-wrapper-active");
+  });
+};
+
+toggleCart();
 toggleMenu();
 },{"swiper":"node_modules/swiper/swiper.esm.js","swiper/swiper-bundle.css":"node_modules/swiper/swiper-bundle.css"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -12252,7 +12270,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54674" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58987" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
