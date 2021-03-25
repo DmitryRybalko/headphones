@@ -12141,9 +12141,9 @@ var _swiper = require("swiper");
 require("swiper/swiper-bundle.css");
 
 // import Swiper styles
-_swiper.Swiper.use([_swiper.Navigation, _swiper.Autoplay, _swiper.Pagination, _swiper.EffectFade]);
+_swiper.Swiper.use([_swiper.Navigation, _swiper.Pagination, _swiper.EffectFade, _swiper.Controller]);
 
-var swiper = new _swiper.Swiper(".swiper-container", {
+var swiperImg = new _swiper.Swiper(".swiper-container", {
   loop: true,
   effect: "fade",
   speed: 660,
@@ -12158,22 +12158,32 @@ var swiper = new _swiper.Swiper(".swiper-container", {
     el: ".swiper-pagination",
     clickable: true,
     type: "bullets"
+  },
+  controller: {
+    control: swiperText
   }
-}); // each panel is highlighted when clicked through the slides.
+}); // 2nd swiper  for text
 
-swiper.on("slideChange", function () {
-  for (var i = 1; i <= numberOfSlides; i++) {
-    var panel = document.getElementById("slide".concat(i)).classList.remove("active-panel");
-    var plusIcon = document.querySelector(".plus-icon".concat(i)).classList.remove("active-panel-plus-icon");
-    var lineH = document.querySelector(".lineH".concat(i)).classList.remove("active-panel-line");
-    var lineV = document.querySelector(".lineV".concat(i)).classList.remove("active-panel-line");
+var swiperText = new _swiper.Swiper(".ls-panel__slider-container", {
+  loop: true,
+  effect: "fade",
+  speed: 660,
+  fadeEffect: {
+    crossFade: true
+  },
+  allowTouchMove: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    type: "bullets"
+  },
+  controller: {
+    control: swiperImg
   }
-});
-swiper.on("transitionStart", function () {
-  var styledPanel = document.querySelector(".rs-panel".concat(swiper.realIndex + 1)).classList.add("active-panel");
-  var styledPlusIcon = document.querySelector(".plus-icon".concat(swiper.realIndex + 1)).classList.add("active-panel-plus-icon");
-  var styledLineH = document.querySelector(".lineH".concat(swiper.realIndex + 1)).classList.add("active-panel-line");
-  var styledLineV = document.querySelector(".lineV".concat(swiper.realIndex + 1)).classList.add("active-panel-line");
 });
 var numberOfSlides = document.querySelector(".swiper-container").getElementsByClassName("rs-panel").length; //change slide on mouseenter
 
@@ -12187,7 +12197,23 @@ var _loop = function _loop(i) {
 
 for (var i = 1; i <= numberOfSlides; i++) {
   _loop(i);
-}
+} // highlight each panel when clicking through the slides
+
+
+swiperText.on("slideChange", function () {
+  for (var _i = 1; _i <= numberOfSlides; _i++) {
+    var panel = document.getElementById("slide".concat(_i)).classList.remove("active-panel");
+    var plusIcon = document.querySelector(".plus-icon".concat(_i)).classList.remove("active-panel-plus-icon");
+    var lineH = document.querySelector(".lineH".concat(_i)).classList.remove("active-panel-line");
+    var lineV = document.querySelector(".lineV".concat(_i)).classList.remove("active-panel-line");
+  }
+});
+swiperText.on("transitionStart", function () {
+  var styledPanel = document.querySelector(".rs-panel".concat(swiperImg.realIndex + 1)).classList.add("active-panel");
+  var styledPlusIcon = document.querySelector(".plus-icon".concat(swiperImg.realIndex + 1)).classList.add("active-panel-plus-icon");
+  var styledLineH = document.querySelector(".lineH".concat(swiperImg.realIndex + 1)).classList.add("active-panel-line");
+  var styledLineV = document.querySelector(".lineV".concat(swiperImg.realIndex + 1)).classList.add("active-panel-line");
+});
 },{"swiper":"node_modules/swiper/swiper.esm.js","swiper/swiper-bundle.css":"node_modules/swiper/swiper-bundle.css"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -12216,7 +12242,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53952" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54296" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
