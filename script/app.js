@@ -95,3 +95,15 @@ swiperText.on("transitionStart", function () {
     .querySelector(`.lineV${swiperImg.realIndex + 1}`)
     .classList.add("active-panel-line");
 });
+
+//toggle menu
+
+const toggleMenu = () => {
+  const hamburgerMenu = document.querySelector(".menu-btn-wrapper");
+  const menu = document.querySelector(".menu-toggle");
+  hamburgerMenu.addEventListener("click", () =>
+    menu.classList.toggle("menu-toggle-active")
+  );
+};
+
+toggleMenu();
