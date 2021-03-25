@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headphones</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <section class="main">
+      <div class="left-side">
+        <div class="left-side__left-panel1 ls_panel">
+          <div class="left-panel1__logo-wrapper">
+            <div class="logo-circle"></div>
+            <div class="logo-circle"></div>
+            <div class="logo-text">
+              <a href="#" class="logo">Headphones</a>
+            </div>
+          </div>
+          <div class="swiper-buttons-wrapper">
+            <div class="swiper-button-prev swiper-button" id="swiper-button">
+              <img
+                class="arrow"
+                src="./assets/arrow-left.svg"
+                width="9px"
+                alt="arrow left"
+              />
+            </div>
+            <div class="swiper-button-next swiper-button" id="swiper-button">
+              <img
+                class="arrow"
+                src="./assets/arrow-right.svg"
+                width="9px"
+                alt="arrow right"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="left-side__left-panel2 ls_panel"></div>
+      </div>
+      <div class="right-side">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__item-link">Urbanears</a>
+              <div class="nav__item__line"></div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item-link">Features</a>
+              <div class="nav__item__line"></div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item-link">Gallery</a>
+              <div class="nav__item__line"></div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item-link">Tech Spec</a>
+              <div class="nav__item__line"></div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item-link">Setup</a>
+              <div class="nav__item__line"></div>
+            </li>
+          </ul>
+        </nav>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <div class="right-side__right-panel-wrapper">
+            <div
+              class="right-side__right-panel1 rs-panel active-panel rs-panel1"
+              id="slide1"
+            >
+              <div class="rs-panel__top">
+                <p class="rs-panel__top__text">
+                  Signature Sound wherever you go.
+                </p>
+              </div>
+              <div class="rs-panel__bottom">
+                <div
+                  class="rs-panel__plus-icon plus-icon1 active-panel-plus-icon"
+                >
+                  <div
+                    class="plus-icon__horizontal line lineH1 active-panel-line"
+                  ></div>
+                  <div
+                    class="plus-icon__vertical line lineV1 active-panel-line"
+                  ></div>
+                </div>
+                <h3 class="rs-panel__heading">sound</h3>
+                <p class="rs-panel__bottom__text">Pure Sound</p>
+              </div>
+            </div>
+            <div
+              class="right-side__right-panel2 rs-panel rs-panel2"
+              id="slide2"
+            >
+              <div class="rs-panel__top">
+                <p class="rs-panel__top__text">
+                  Uncompromising wireless sound.
+                </p>
+              </div>
+              <div class="rs-panel__bottom">
+                <div class="rs-panel__plus-icon plus-icon2">
+                  <div class="plus-icon__horizontal line lineH2"></div>
+                  <div class="plus-icon__vertical line lineV2"></div>
+                </div>
+                <h3 class="rs-panel__heading">wireless</h3>
+                <p class="rs-panel__bottom__text">Bluetooth</p>
+              </div>
+            </div>
+            <div
+              class="right-side__right-panel3 rs-panel rs-panel3"
+              id="slide3"
+            >
+              <div class="rs-panel__top">
+                <p class="rs-panel__top__text">Up to 24 hours of playtime.</p>
+              </div>
+              <div class="rs-panel__bottom">
+                <div class="rs-panel__plus-icon plus-icon3">
+                  <div class="plus-icon__horizontal line lineH3"></div>
+                  <div class="plus-icon__vertical line lineV3"></div>
+                </div>
+                <h3 class="rs-panel__heading">battery</h3>
+                <p class="rs-panel__bottom__text">Stay on the move</p>
+              </div>
+            </div>
+            <div
+              class="right-side__right-panel4 rs-panel rs-panel4"
+              id="slide4"
+            >
+              <div class="rs-panel__top">
+                <p class="rs-panel__top__text">Looks as good as it sounds.</p>
+              </div>
+              <div class="rs-panel__bottom">
+                <div class="rs-panel__plus-icon plus-icon4">
+                  <div class="plus-icon__horizontal line lineH4"></div>
+                  <div class="plus-icon__vertical line lineV4"></div>
+                </div>
+                <h3 class="rs-panel__heading">design</h3>
+                <p class="rs-panel__bottom__text">Focus on pure essentials</p>
+              </div>
+            </div>
+            <div
+              class="right-side__right-panel5 rs-panel rs-panel5"
+              id="slide5"
+            >
+              <div class="rs-panel__top">
+                <p class="rs-panel__top__text">Comfort, fit and style.</p>
+              </div>
+              <div class="rs-panel__bottom">
+                <div class="rs-panel__plus-icon plus-icon5">
+                  <div class="plus-icon__horizontal line lineH5"></div>
+                  <div class="plus-icon__vertical line lineV5"></div>
+                </div>
+                <h3 class="rs-panel__heading">materials</h3>
+                <p class="rs-panel__bottom__text">Pure, honest materials</p>
+              </div>
+            </div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div
+              class="swiper-slide slide"
+              style="background-image: url(./assets/im1.png)"
+            ></div>
+            <div
+              class="swiper-slide slide"
+              style="background-image: url(./assets/im2.png)"
+            ></div>
+            <div
+              class="swiper-slide slide"
+              style="background-image: url(./assets/im3.png)"
+            ></div>
+            <div
+              class="swiper-slide slide"
+              style="background-image: url(./assets/im4.png)"
+            ></div>
+            <div
+              class="swiper-slide slide"
+              style="background-image: url(./assets/im5.png)"
+            ></div>
+          </div>
+          <div class="right-side-gradient-top gradient"></div>
+          <div class="right-side-gradient-bottom gradient"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <script src="./script/app.js"></script>
+  </body>
+</html>
