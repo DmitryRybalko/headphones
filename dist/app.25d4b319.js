@@ -12227,17 +12227,16 @@ var toggleMenu = function toggleMenu() {
 var toggleCart = function toggleCart() {
   var cart = document.querySelector(".cart-icon");
   var cartMenu = document.querySelector(".cart-toggle-wrapper");
-  var closeCartIcon = document.querySelector(".close-icon");
-  var closeCart = document.querySelector(".cart-toggle-wrapper");
+  var closeCartIcon = document.querySelector(".close-icon"); //const closeCart = document.querySelector(".cart-toggle-wrapper");
+
   cart.addEventListener("click", function () {
     return cartMenu.classList.toggle("cart-toggle-wrapper-active");
   });
   closeCartIcon.addEventListener("click", function () {
     return cartMenu.classList.remove("cart-toggle-wrapper-active");
-  });
-  closeCart.addEventListener("click", function () {
-    return cartMenu.classList.remove("cart-toggle-wrapper-active");
-  });
+  }); //closeCart.addEventListener("click", () =>
+  //  cartMenu.classList.remove("cart-toggle-wrapper-active")
+  //);
 };
 
 toggleCart();
@@ -12270,7 +12269,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58987" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60243" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

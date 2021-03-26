@@ -110,16 +110,16 @@ const toggleCart = () => {
   const cart = document.querySelector(".cart-icon");
   const cartMenu = document.querySelector(".cart-toggle-wrapper");
   const closeCartIcon = document.querySelector(".close-icon");
-  const closeCart = document.querySelector(".cart-toggle-wrapper");
+  //const closeCart = document.querySelector(".cart-toggle-wrapper");
   cart.addEventListener("click", () =>
     cartMenu.classList.toggle("cart-toggle-wrapper-active")
   );
   closeCartIcon.addEventListener("click", () =>
     cartMenu.classList.remove("cart-toggle-wrapper-active")
   );
-  closeCart.addEventListener("click", () =>
-    cartMenu.classList.remove("cart-toggle-wrapper-active")
-  );
+  //closeCart.addEventListener("click", () =>
+  //  cartMenu.classList.remove("cart-toggle-wrapper-active")
+  //);
 };
 
 toggleCart();
